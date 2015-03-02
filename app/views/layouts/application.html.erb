@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>GrouponApi</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <nav class="navbar navbar-default navbar-inverse" role="navigation">
-    <div class="container">
+    <div class="container-fluid">
     <a class="navbar-brand" href="http://groupon-api.herokuapp.com">Products <span class="glyphicon glyphicon-star"></span></a>
     <div class="navbar-header navbar-right">
       <!-- When submit the form, the view rendered will be the index view of our articles resource -->
@@ -23,7 +24,7 @@
     </div>
   </nav>
   <% end %>
-  <div class="container">
+  <div class="container-fluid">
 
     <%= yield %>
     <%= debug(params) if Rails.env.development? %>
